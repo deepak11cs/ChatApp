@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friend Requests"
+            android:id="@+id/tv1"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:foreground="@color/cardview_dark_background"
+            />
+        <ListView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:minHeight="300dp"
+            android:id="@+id/friendrequestlist"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Profile"
+            android:id="@+id/tv2"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:foreground="@color/cardview_dark_background"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="user name"
+            android:id="@+id/profile_nametv"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="status"
+            android:id="@+id/profile_statustv"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email id"
+            android:id="@+id/profile_emailtv"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

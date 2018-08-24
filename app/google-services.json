@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "397918541336",
+    "firebase_url": "https://kmv-mobile.firebaseio.com",
+    "project_id": "kmv-mobile",
+    "storage_bucket": "kmv-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397918541336:android:ea210f6bea11ccd3",
+        "android_client_info": {
+          "package_name": "com.example.dev.kmv_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397918541336-ghbdapicus22n6u4a5ms7eg5h2bl929o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dev.kmv_mobile",
+            "certificate_hash": "1957d2cb7e7608ee83e86a63ea02280c851c0d34"
+          }
+        },
+        {
+          "client_id": "397918541336-bni6jvv5h2m19dp5hd7o056hva72mskt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-_cWUqBhZ8kFT8FWqp89QSoUH2ChCBbc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397918541336-bni6jvv5h2m19dp5hd7o056hva72mskt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

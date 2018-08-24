@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFriend">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="51dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Display name"
+        android:textSize="30sp"
+        android:id="@+id/profile_displayname"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_status"
+        android:text="Default status"
+        android:textSize="16sp"
+        android:layout_below="@+id/profile_displayname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_email"
+        android:textSize="16sp"
+        android:layout_below="@id/profile_status"
+        android:text="email"
+        android:layout_centerHorizontal="true"/>
+    <!--
+        <Button
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/profile_status"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/profile_status"
+            android:backgroundTint="@color/authui_colorAccent"
+            android:text="ADD FRIEND" />
+    -->
+    <android.support.v7.widget.CardView
+        android:layout_width="150sp"
+        android:id="@+id/profile_button"
+        android:layout_height="40sp"
+        android:layout_below="@+id/profile_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="20sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textaddfriend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="ADD FRIEND"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
