@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/messageboxtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="9:54" />
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        android:id="@+id/messageboxtext"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:background="@drawable/out_message_bg"
+        android:maxWidth="250dp"
+        android:paddingLeft="10dip"
+        android:text="Hello !"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="20dp" />
+
+
+
+</LinearLayout>

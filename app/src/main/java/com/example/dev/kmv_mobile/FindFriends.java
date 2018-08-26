@@ -14,6 +14,7 @@ import com.example.dev.kmv_mobile.models.User;
 import com.example.dev.kmv_mobile.utility.CircleTransform;
 import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseListOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +31,13 @@ public class FindFriends extends AppCompatActivity {
     Query query;
     DatabaseReference userDatabaseReference;
     FirebaseListAdapter<User> firebaseListAdapter;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        FirebaseDatabase.getInstance().getReference().child("UidMapping").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("online_status").setValue(true);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,5 +85,21 @@ public class FindFriends extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        FirebaseDatabase.getInstance().getReference().child("UidMapping").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("online_status").setValue(false);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        FirebaseDatabase.getInstance().getReference().child("UidMapping").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("online_status").setValue(false);
     }
 }

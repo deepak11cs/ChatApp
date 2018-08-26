@@ -9,7 +9,7 @@
     tools:context="com.example.dev.kmv_mobile.ChatPage">
 
     <ListView
-        android:id="@+id/chat_page_listitem"
+        android:id="@+id/chat_page_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:transcriptMode="alwaysScroll"

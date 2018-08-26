@@ -16,6 +16,6 @@ public class KMV_mobile extends Application {
     @Override
     public void onTerminate() {
         super.onTerminate();
-        //Toast.makeText(getApplicationContext(),"terminated",Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getApplicationContext(),"terminated",Toast.LENGTH_SHORT).show();
     }
 }

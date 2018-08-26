@@ -65,12 +65,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        uidmapreference.child("online_status").setValue(false);
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        uidmapreference.child("online_status").setValue(false);
     }
 
     @Override
@@ -80,9 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
-
+        uidmapreference.child("online_status").setValue(false);
     }
 }
