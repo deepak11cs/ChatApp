@@ -59,7 +59,7 @@ public class Signup extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"your passwords don't match please enter again !",Toast.LENGTH_LONG).show();
                 }
                 else{
-                    final String email=eemail.getText().toString().trim();
+                    final String email=eemail.getText().toString().trim().toLowerCase();
                     final String name=ename.getText().toString().trim();
                     mFirebaseAuth=FirebaseAuth.getInstance();
                     mFirebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

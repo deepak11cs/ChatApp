@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dev.kmv_mobile.R;
 import com.example.dev.kmv_mobile.models.ChatHead;
@@ -52,6 +53,7 @@ public class Profile extends Fragment {
             protected void populateView(final View v, final Request model, final int position) {
 
                 final String sendermail=getRef(position).getKey();
+                //Toast.makeText(getContext(),sendermail,Toast.LENGTH_SHORT).show();
                 FirebaseDatabase.getInstance().getReference().child("Users").child(sendermail).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -61,8 +63,10 @@ public class Profile extends Fragment {
                         ImageView imageView=v.findViewById(R.id.request_dp);
                         Button accept=v.findViewById(R.id.request_accept);
                         Button decline=v.findViewById(R.id.request_decline);
-                        tvname.setText(dataSnapshot.child("name").getValue().toString());
-                        tvemail.setText(dataSnapshot.child("email").getValue().toString());
+                        String name=dataSnapshot.child("name").getValue().toString();
+                        tvname.setText(name);
+                        String email=dataSnapshot.child("email").getValue().toString();
+                        tvemail.setText(email);
                         tvmessage.setText(model.getMesssage());
                         Picasso.with(getContext()).load(dataSnapshot.child("profilepic_sm").getValue().toString()).transform(new CircleTransform()).into(imageView);
                         accept.setOnClickListener(new View.OnClickListener() {

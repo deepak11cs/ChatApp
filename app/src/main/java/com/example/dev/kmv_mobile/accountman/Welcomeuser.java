@@ -57,7 +57,7 @@ public class Welcomeuser extends AppCompatActivity {
             bsignin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    email=eemail.getText().toString().trim();
+                    email=eemail.getText().toString().trim().toLowerCase();
                     password=epassword.getText().toString();
                     if(TextUtils.isEmpty(email) ||TextUtils.isEmpty(password)){
                         Toast.makeText(getApplicationContext(),"Enter email and password !",Toast.LENGTH_SHORT).show();
